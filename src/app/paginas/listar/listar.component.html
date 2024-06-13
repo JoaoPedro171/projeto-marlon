@@ -1,0 +1,25 @@
+<div class="introducao">
+  <h1>Lista de livros</h1>
+  <label for="genero">Selecione o gênero:</label>
+  <select id="genero" (change)="MudancaGenero($event)">
+    <option value="fiction">Ficção</option>
+    <option value="science">Ciência</option>
+    <option value="history">História</option>
+    <option value="fantasy">Fantasia</option>
+  </select>
+</div>
+<div class="container" *ngIf="!listaLivros">
+  <p>Sem livros para listar</p>
+</div>
+<div class="card-container" *ngIf="listaLivros">
+  <div class="card" *ngFor="let livro of listaLivros | paginate: { itemsPerPage: 12, currentPage: p}">
+    <figure>
+      <img src="https://covers.openlibrary.org/b/id/{{ livro.cover_i }}-L.jpg" alt="{{ livro.title }}">
+    </figure>
+    <article>
+      <h1>{{ livro.title | uppercase }}</h1>
+      <p>{{ livro.author_name | mudaAutor }}</p>
+    </article>
+  </div>
+</div>
+<pagination-controls class="paginacao" (pageChange)="p = $event"></pagination-controls>

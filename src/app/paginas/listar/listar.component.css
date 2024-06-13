@@ -1,0 +1,96 @@
+.introducao {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.introducao h1 {
+  color: #333;
+}
+
+.introducao label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.introducao select {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.container {
+  text-align: center;
+  color: #555;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card figure {
+  margin: 0;
+  padding: 0;
+}
+
+.card img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.card h1 {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #333;
+}
+
+.card p {
+  font-size: 14px;
+  color: #666;
+}
+
+.paginacao {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.paginacao .ng2-pagination {
+  display: flex;
+  gap: 10px;
+}
+
+.paginacao .ng2-pagination a,
+.paginacao .ng2-pagination span {
+  padding: 10px 15px;
+  border: 1px solid #007bff;
+  color: #007bff;
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.paginacao .ng2-pagination a:hover,
+.paginacao .ng2-pagination span:hover {
+  background-color: #007bff;
+  color: #fff;
+}
