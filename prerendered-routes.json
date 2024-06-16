@@ -1,0 +1,7 @@
+{
+  "routes": [
+    "/cadastrar",
+    "/home",
+    "/listar"
+  ]
+}
